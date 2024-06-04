@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* disposition du container*/
+
+body {
+  background: #5d1818;
+  padding: 5px;
+}
+.container {
+  width: 60%;
+  margin: auto;
+  margin-top: 150px;
+  display: flex;
+  box-shadow: 5px 5px 42px;
+  border: 1px solid 3000;
+}
+.left-side {
+  width: 50%;
+  height: 100%;
+}
+.left-side img {
+  width: 100%;
+  height: 1000px;
+}
+
+/* disposision du formulaire */
+
+form {
+  background: #5d1818;
+  width: 50%;
+  padding: 4rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+h1 {
+  font-size: 3rem;
+}
+
+/* gerons les inputs */
+
+input {
+  border-bottom: 1px solid #000;
+  color: #fff;
+  background: transparent;
+}
+
+/* animons notre groupe */
+.duo-box label {
+  position: relative;
+  bottom: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+.duo-box input:focus + label,
+.duo-box input:valid + label {
+  bottom: 90px;
+}
+/* fin animation */
+
+input[type="time"]::before {
+  border: none;
+  background: url(bx-chevron-down.svg) no-repeat;
+}
+.duo-box {
+  font-size: 1.5rem;
+  width: 100%;
+}
+.duo-box input {
+  font-size: 1.5rem;
+  padding: 1rem;
+  width: 95%;
+  background: transparent;
+  transition: 0.1s ease;
+}
+.duo-box input:focus {
+  border-bottom: 1px solid #dd5656;
+}
+.time,
+.food {
+  border-bottom: 1px solid #000;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+.time img {
+  width: 5%;
+  color: #fff;
+}
+/* le select */
+
+select {
+  width: 5%;
+  font-size: 1.5rem;
+  background: transparent;
+  color: #000;
+}
+option {
+  color: #000;
+}
+
+/* button de reservation */
+
+/* animation button */
+.reserv button {
+  font-weight: bold;
+  position: relative;
+  font-size: 1.5rem;
+  background-color: #8c2828;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  padding: 2rem;
+  overflow: hidden;
+  /* transition: 1.5s ease-in-out; */
+  /* white-space: nowrap; */
+}
+
+.reserv button .number {
+  background-color: transparent;
+  color: black;
+  padding: 1rem;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.reserv button .reserv-num {
+  display: none;
+  color: black;
+  padding-left: 10px;
+}
+
+.reserv button:hover {
+  width: auto;
+}
+
+.reserv button:hover .number {
+  background-color: black;
+  color: white;
+}
+.reserv button:active .reserv-num {
+  display: inline;
+}
+
+/* fin animation */
+.number {
+  background: #000;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 50%;
+}
+
+/* button */
+
+.book {
+  padding: 1.5rem;
+  width: 45%;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.book:hover {
+  background: #dd5656;
+  color: #fff;
+}
+.verifie {
+  font-size: 1.3rem;
+  color: #f97070;
+}
+
+/* responsivite */
+
+@media screen and (max-width: 920px) {
+  body {
+    padding: 10px;
+  }
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  label {
+    font-size: 1rem;
+  }
+  .container {
+    display: block;
+    margin: 0;
+    width: 100%;
+    /* background: #000; */
+  }
+  .left-side {
+    width: 100%;
+  }
+  .left-side img {
+    width: 100%;
+  }
+  .reserv button {
+    font-size: 10px;
+    padding: 10px;
+  }
+  .reserv {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  form {
+    padding: 15px;
+    width: 91%;
+  }
+  .book {
+    padding: 1rem;
+    background: #8c2828;
+    color: #fff;
+  }
+  .verifie {
+    font-size: 12px;
+  }
+  /* .duo-box{
+    height: 100px;
+  } */
+}
